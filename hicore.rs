@@ -1,6 +1,5 @@
 #![no_std]
 #![feature(lang_items)]
-#![feature(intrinsics)]
 
 extern crate libc;
 extern crate core;
