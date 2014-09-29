@@ -20,6 +20,8 @@ fn start(_argc: int, _argv: *const *const u8) -> int {
 #[lang = "stack_exhausted"] extern fn stack_exhausted() {}
 #[lang = "eh_personality"] extern fn eh_personality() {}
 
+#[lang="sized"] trait Sized {}
+
 extern "rust-intrinsic" {
     fn transmute<T, U>(x: T) -> U;
 }

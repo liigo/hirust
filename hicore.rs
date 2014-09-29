@@ -20,9 +20,9 @@ fn start(_argc: int, _argv: *const *const u8) -> int {
 #[lang = "stack_exhausted"] extern fn stack_exhausted() {}
 #[lang = "eh_personality"] extern fn eh_personality() {}
 
-#[lang = "begin_unwind"]
-extern fn begin_unwind(_args: &core::fmt::Arguments,
-                        _file: &str,
-                        _line: uint) -> ! {
+#[lang = "fail_fmt"]
+extern fn fail_fmt(_args: &core::fmt::Arguments,
+                   _file: &str,
+                   _line: uint) -> ! {
     loop {}
 }
